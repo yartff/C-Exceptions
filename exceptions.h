@@ -26,10 +26,10 @@ extern struct		s_except {
 # define	THROW(x) do {		\
   if (!EXC_exception)			\
     abort_uncatched();			\
-  jmp_buf *tmp = &EXC_exception->buf;	\
+  jmp_buf *EXC_tmp = &EXC_exception->buf;\
   EXC_exception = EXC_exception->next;	\
   EXC_id = x;				\
-  longjmp(*tmp, 1);			\
+  longjmp(*EXC_tmp, 1);			\
       }while(0)
 # define	ENDTRY		}}
 
