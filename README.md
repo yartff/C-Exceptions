@@ -1,7 +1,7 @@
 C-Exceptions
 ============
 
-For reddit users, but everyone can look of course!
+Exceptions emulation in C.
 
 Coded after discussion on reddit about 'atexit()' which allows you to call some of your code before the programm quits.
 
